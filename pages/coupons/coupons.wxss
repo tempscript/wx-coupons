@@ -1,0 +1,69 @@
+/* pages/coupons/coupons.wxss */
+.coupons-wrap {
+  height: 100%;
+  background-color: #ac0014; }
+  .coupons-wrap .nav-bar .title-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    .coupons-wrap .nav-bar .title-bar .left-icon {
+      display: flex;
+      align-items: center;
+      color: #fff;
+      font-size: 16px;
+      margin-left: 20px; }
+      .coupons-wrap .nav-bar .title-bar .left-icon .name {
+        margin-left: 6px; }
+  .coupons-wrap .images-wrap {
+    display: flex;
+    justify-content: center;
+    padding-top: 271rpx; }
+  .coupons-wrap .card-wrap {
+    height: 553rpx;
+    background-color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-radius: 60rpx 60rpx 0 0; }
+    .coupons-wrap .card-wrap .card {
+      margin: 0 40rpx;
+      height: 100%; }
+      .coupons-wrap .card-wrap .card .card-top {
+        margin-top: 2px;
+        height: 147rpx;
+        border-bottom: 1px dashed transparent;
+        background: linear-gradient(white, white) padding-box, repeating-linear-gradient(-45deg, #ccc 0, #D8D8D8 0.35em, white 0, white 0.85em);
+        display: flex;
+        align-items: center; }
+        .coupons-wrap .card-wrap .card .card-top .bar {
+          width: 6px;
+          height: 23px;
+          background-image: linear-gradient(#D20028, #A60012);
+          border-radius: 6px;
+          margin-right: 10px; }
+        .coupons-wrap .card-wrap .card .card-top .title {
+          font-size: 22px; }
+      .coupons-wrap .card-wrap .card .card-bottom .list {
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 12px; }
+        .coupons-wrap .card-wrap .card .card-bottom .list .row {
+          padding-top: 12px;
+          flex: 0 0 50%;
+          color: #666;
+          font-size: 12px; }
+      .coupons-wrap .card-wrap .card .button-wrap {
+        width: 100%;
+        position: absolute;
+        bottom: 98rpx;
+        left: 0; }
+        .coupons-wrap .card-wrap .card .button-wrap .button {
+          color: #fff;
+          background-image: linear-gradient(#D20028, #A60012);
+          font-size: 20px;
+          border-radius: 6px;
+          font-weight: 300;
+          height: 55px;
+          line-height: 55px;
+          padding: 0;
+          width: 670rpx; }

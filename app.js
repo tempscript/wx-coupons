@@ -1,6 +1,23 @@
 //app.js
 App({
   onLaunch: function () {
+
+    const statusBarHeight = wx.getSystemInfoSync().statusBarHeight
+    const custom = wx.getMenuButtonBoundingClientRect()
+    const titleBarHeight = Math.floor(custom.bottom + custom.top - (statusBarHeight * 2));
+
+    const menuButton = wx.getMenuButtonBoundingClientRect()
+    //px转换rpx的比例
+    const pxToRpxScale = 750 / wx.getSystemInfoSync().windowWidth;
+    //标题栏高度
+    this.globalData.titleBarHeight = titleBarHeight
+    //状态栏高度
+    this.globalData.statusBarHeight = statusBarHeight
+
+    //右上角胶囊按钮的布局信息
+    this.globalData.menuButton = menuButton
+
+    
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
@@ -34,6 +51,9 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    titleBarHeight: 0,
+    statusBarHeight: 0,
+    menuButton:null
   }
 })

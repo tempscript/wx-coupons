@@ -1,0 +1,43 @@
+<!--pages/coupons/coupons.wxml-->
+
+<view class="coupons-wrap">
+	<view class="nav-bar" style="height:{{titleBarHeight+statusBarHeight}}px">
+		<view class="status-bar" style="height: {{statusBarHeight}}px"></view>
+		<view class="title-bar" style="height: {{titleBarHeight}}px">
+			<view class="left-icon">
+				<van-icon name="location-o" color="white" size="19" />
+				<text class="name">上海</text>
+			</view>
+
+			<van-icon name="user-o" color="white" size="19" style="margin-right:{{menuButton.width+18}}px" />
+		</view>
+	</view>
+	<view class="images-wrap">
+		<image src="/images/u.png" style="width:632rpx;height:268rpx"></image>
+	</view>
+	<view class="card-wrap">
+		<view class="card">
+			<view class="card-top">
+				<view class="bar"></view>
+				<view class="title">爱情海购物公园</view>
+			</view>
+			<view class="card-bottom">
+				<view class="list">
+					<view class="row">5元立减券</view>
+					<view class="row">周券</view>
+					<view class="row">
+						可领一次
+					</view>
+					<view class="row">
+						全上海商场通用
+					</view>
+				</view>
+
+
+			</view>
+			<view class="button-wrap">
+				<button class="button">立即领取</button>
+			</view>
+		</view>
+	</view>
+</view>
