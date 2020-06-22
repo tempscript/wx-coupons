@@ -1,43 +1,145 @@
-<!--pages/coupons/coupons.wxml-->
-
-<view class="coupons-wrap">
-	<view class="nav-bar" style="height:{{titleBarHeight+statusBarHeight}}px">
+<view class="body-main-box">
+	<view class="nav-bar">
 		<view class="status-bar" style="height: {{statusBarHeight}}px"></view>
 		<view class="title-bar" style="height: {{titleBarHeight}}px">
 			<view class="left-icon">
 				<van-icon name="location-o" color="white" size="19" />
 				<text class="name">上海</text>
 			</view>
-
 			<van-icon name="user-o" color="white" size="19" style="margin-right:{{menuButton.width+18}}px" />
 		</view>
 	</view>
-	<view class="images-wrap">
-		<image src="/images/u.png" style="width:632rpx;height:268rpx"></image>
-	</view>
-	<view class="card-wrap">
-		<view class="card">
-			<view class="card-top">
-				<view class="bar"></view>
-				<view class="title">爱情海购物公园</view>
-			</view>
-			<view class="card-bottom">
-				<view class="list">
-					<view class="row">5元立减券</view>
-					<view class="row">周券</view>
-					<view class="row">
-						可领一次
+	<!-- 第一张 -->
+	<view class="body-swiper" bindtouchstart="touchstart1" bindtouchend="touchend1" style="z-index:{{index1}};top:{{ballTop1}}rpx;  margin-left:{{ballLeft1}}rpx;width:{{ballWidth1}}rpx;" animation="{{animationData1}}">
+		<view class="body-container">
+			<view class="card">
+				<image class="avatar" src="/images/b.jpeg"></image>
+				<view class="card-content">
+					<view class="card-top">
+						<view class="bar"></view>
+						<view class="title">爱情海购物公园停车券</view>
 					</view>
-					<view class="row">
-						全上海商场通用
+					<view class="coupons-title">
+						<view class="red">5</view>
+						<view class="desc">元优惠券</view>
 					</view>
+					<view class="card-bottom">
+						<view class="list">
+							<view class="row">5元立减券</view>
+							<view class="row">周券</view>
+							<view class="row">
+								可领一次
+							</view>
+							<view class="row">
+								全上海商场通用
+							</view>
+						</view>
+
+
+					</view>
+
 				</view>
+				<view class="button-wrap">
+					<button class="button submit-button">立即领取</button>
+					<button class="button share-button">邀请好友</button>
+				</view>
+			</view>
 
 
-			</view>
-			<view class="button-wrap">
-				<button class="button">立即领取</button>
-			</view>
 		</view>
 	</view>
+
+	<view class="body-swiper" bindtouchstart="touchstart2" bindtouchend="touchend2" style="z-index:{{index2}};top:{{ballTop2}}rpx;  margin-left:{{ballLeft2}}rpx;width:{{ballWidth2}}rpx;" animation="{{animationData2}}">
+		<view class="body-container">
+			<view class="card">
+				<image class="avatar" src="/images/b.jpeg"></image>
+				<view class="card-content">
+					<view class="card-top">
+						<view class="bar"></view>
+						<view class="title">爱情海购物公园停车券</view>
+					</view>
+					<view class="coupons-title">
+						<view class="red">5</view>
+						<view class="desc">元优惠券</view>
+					</view>
+					<view class="card-bottom">
+						<view class="list">
+							<view class="row">5元立减券</view>
+							<view class="row">周券</view>
+							<view class="row">
+								可领一次
+							</view>
+							<view class="row">
+								全上海商场通用
+							</view>
+						</view>
+
+
+					</view>
+
+				</view>
+				<view class="button-wrap">
+					<button class="button submit-button">立即领取</button>
+					<button class="button share-button">邀请好友</button>
+				</view>
+			</view>
+
+
+		</view>
+	</view>
+	<view class="body-swiper" bindtouchstart="touchstart3" bindtouchend="touchend3" style="z-index:{{index3}};top:{{ballTop3}}rpx;  margin-left:{{ballLeft3}}rpx;width:{{ballWidth3}}rpx;" animation="{{animationData3}}">
+		<view class="body-container">
+			<view class="card">
+				<image class="avatar" src="/images/b.jpeg"></image>
+				<view class="card-content">
+					<view class="card-top">
+						<view class="bar"></view>
+						<view class="title">爱情海购物公园停车券</view>
+					</view>
+					<view class="coupons-title">
+						<view class="red">5</view>
+						<view class="desc">元优惠券</view>
+					</view>
+					<view class="card-bottom">
+						<view class="list">
+							<view class="row">5元立减券</view>
+							<view class="row">周券</view>
+							<view class="row">
+								可领一次
+							</view>
+							<view class="row">
+								全上海商场通用
+							</view>
+						</view>
+
+
+					</view>
+
+				</view>
+				<view class="button-wrap">
+					<button class="button submit-button">立即领取</button>
+					<button class="button share-button">邀请好友</button>
+				</view>
+			</view>
+
+
+		</view>
+	</view>
+	<!-- <view class="body-swiper2" bindtouchstart="touchstart2" bindtouchend="touchend2" style="z-index:{{index2}};top:{{ballTop2}}rpx;margin-left:{{ballLeft2}}rpx;width:{{ballWidth2}}rpx;" animation="{{animationData2}}">
+  
+        <block wx:if="{{isFront2}}">
+            <view class="body-container" style="background-color:#FCBD00">
+                <image class="avatar" src="/images/avatar.png"></image>
+            </view>
+        </block>
+    </view>
+
+    <view class="body-swiper3" bindtouchstart="touchstart3" bindtouchend="touchend3" style="z-index:{{index3}};top:{{ballTop3}}rpx;  margin-left:{{ballLeft3}}rpx;width:{{ballWidth3}}rpx;" animation="{{animationData3}}">
+        <block wx:if="{{isFront3}}">
+            <view class="body-container" style="background-color:#52BDC6">
+                <text style="text-align:center">卡片3正面</text>
+                <image class="avatar" src="/images/avatar.png"></image>
+            </view>
+        </block>
+    </view> -->
 </view>
