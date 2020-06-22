@@ -49,10 +49,10 @@
 		</view>
 	</view>
 
-	<view class="body-swiper" bindtouchstart="touchstart2" bindtouchend="touchend2" style="z-index:{{index2}};top:{{ballTop2}}rpx;  margin-left:{{ballLeft2}}rpx;width:{{ballWidth2}}rpx;" animation="{{animationData2}}">
+	<view class="body-swiper2" bindtouchstart="touchstart2" bindtouchend="touchend2" style="z-index:{{index2}};top:{{ballTop2}}rpx;  margin-left:{{ballLeft2}}rpx;width:{{ballWidth2}}rpx;" animation="{{animationData2}}">
 		<view class="body-container">
 			<view class="card">
-				<image class="avatar" src="/images/b.jpeg"></image>
+				<image class="avatar" src="/images/a.png"></image>
 				<view class="card-content">
 					<view class="card-top">
 						<view class="bar"></view>
@@ -87,10 +87,10 @@
 
 		</view>
 	</view>
-	<view class="body-swiper" bindtouchstart="touchstart3" bindtouchend="touchend3" style="z-index:{{index3}};top:{{ballTop3}}rpx;  margin-left:{{ballLeft3}}rpx;width:{{ballWidth3}}rpx;" animation="{{animationData3}}">
+	<view class="body-swiper3" bindtouchstart="touchstart3" bindtouchend="touchend3" style="z-index:{{index3}};top:{{ballTop3}}rpx;  margin-left:{{ballLeft3}}rpx;width:{{ballWidth3}}rpx;" animation="{{animationData3}}">
 		<view class="body-container">
 			<view class="card">
-				<image class="avatar" src="/images/b.jpeg"></image>
+				<image class="avatar" src="/images/avatar2.png"></image>
 				<view class="card-content">
 					<view class="card-top">
 						<view class="bar"></view>

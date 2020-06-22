@@ -13,15 +13,14 @@ Page({
     animationData2: {},
     animationData3: {},
     ballTop1: 130,
-    ballTop2: 120,
-    ballTop3: 110,
-    ballWidth1: 680,
-    ballWidth2: 640,
-    ballWidth3: 605,
+    ballTop2: 145,
+    ballTop3: 160,
+    ballWidth1: 670,
+    ballWidth2: 630,
+    ballWidth3: 590,
     index1: 3,
     index2: 2,
     index3: 1,
-    statusBarHeight: getApp().globalData.statusBarHeight,
   },
   onLoad(options) {},
 
@@ -55,8 +54,7 @@ Page({
         // 如更tmX<0，即(离开点的X)-(起始点X)小于0 ，判定为左滑
         if (tmX < 0) {
           console.log("左滑=====");
-          // 执行左滑动画
-          this.Animation1(-500);
+      
           // 如更tmX>0，即(离开点的X)-(起始点X)大于0 ，判定为右滑
         } else {
           console.log("右滑=====");
@@ -68,15 +66,17 @@ Page({
         // 如更tmY<0，即(离开点的Y)-(起始点Y)小于0 ，判定为上滑
         if (tmY < 0) {
           console.log("上滑动=====");
-          this.setData({
-            isFront1: !this.data.isFront1
-          });
+             // 执行左滑动画
+             this.Animation1(-500);
           // 如更tmY>0，即(离开点的Y)-(起始点Y)大于0 ，判定为下滑
         } else {
+          console.log("下滑成功")
           console.log("下滑动=====");
-          this.setData({
-            isFront1: !this.data.isFront1
-          });
+          // this.setData({
+          //   isFront1: !this.data.isFront1
+          // });
+           // 执行右滑动画
+           this.Animation1(500);
         }
       }
     } else {
@@ -114,22 +114,18 @@ Page({
       if (absX > absY) {
         if (tmX < 0) {
           console.log("左滑=====");
-          this.Animation2(-500);
+          
         } else {
           console.log("右滑=====");
-          this.Animation2(500);
+         
         }
       } else {
         if (tmY < 0) {
           console.log("上滑动=====");
-          this.setData({
-            isFront2: !this.data.isFront2
-          });
+          this.Animation2(-500);
         } else {
           console.log("下滑动=====");
-          this.setData({
-            isFront2: !this.data.isFront2
-          });
+          this.Animation2(500);
         }
 
       }
@@ -166,7 +162,7 @@ Page({
       if (absX > absY) {
         if (tmX < 0) {
           console.log("左滑=====");
-          this.Animation3(-500);
+         
         } else {
           console.log("右滑=====");
           this.Animation3(500);
@@ -175,14 +171,10 @@ Page({
 
         if (tmY < 0) {
           console.log("上滑动=====");
-          this.setData({
-            isFront3: !this.data.isFront3
-          });
+          this.Animation3(-500);
         } else {
           console.log("下滑动=====");
-          this.setData({
-            isFront3: !this.data.isFront3
-          });
+          this.Animation3(500);
         }
       }
     } else {
@@ -207,11 +199,10 @@ Page({
     this.animation = animation;
 
     if (translateXX > 0) {
-      this.animation.translateY(0).rotate(20).translateX(translateXX).opacity(0).step();
+      this.animation.translateY(translateXX).rotate(20).translateX(0).opacity(0).step();
     } else {
-      this.animation.translateY(0).rotate(-20).translateX(translateXX).opacity(0).step();
+      this.animation.translateY(translateXX).rotate(-20).translateX(0).opacity(0).step();
     }
-
     this.animation.translateY(0).translateX(0).opacity(1).rotate(0).step({
       duration: 10
     });
@@ -222,19 +213,19 @@ Page({
 
     setTimeout(() => {
       this.setData({
-        ballTop1: 130,
+        ballTop1: 160,
         ballLeft1: -302.5,
-        ballWidth1: 605,
+        ballWidth1: 550,
         index1: 1,
 
-        ballTop2: 150,
-        ballLeft2: -340,
-        ballWidth2: 680,
+        ballTop2: 130,
+        ballLeft2: -335,
+        ballWidth2: 670,
         index2: 3,
 
-        ballTop3: 140,
+        ballTop3: 145,
         ballLeft3: -320,
-        ballWidth3: 640,
+        ballWidth3: 605,
         index3: 2,
       })
     }, 500);
@@ -253,9 +244,9 @@ Page({
     this.animation = animation;
 
     if (translateXX > 0) {
-      this.animation.translateY(0).rotate(20).translateX(translateXX).opacity(0).step();
+      this.animation.translateY(translateXX).rotate(20).translateX(0).opacity(0).step();
     } else {
-      this.animation.translateY(0).rotate(-20).translateX(translateXX).opacity(0).step();
+      this.animation.translateY(translateXX).rotate(-20).translateX(0).opacity(0).step();
     }
 
     this.animation.translateY(0).translateX(0).opacity(1).rotate(0).step({
@@ -268,20 +259,20 @@ Page({
 
     setTimeout(() => {
       this.setData({
-        ballTop1: 130,
-        ballLeft1: -320,
-        ballWidth1: 640,
-        index1: 2,
-
-        ballTop2: 120,
+        ballTop2: 160,
         ballLeft2: -302.5,
-        ballWidth2: 605,
+        ballWidth2: 550,
         index2: 1,
 
-        ballTop3: 140,
-        ballLeft3: -340,
-        ballWidth3: 680,
+        ballTop3: 130,
+        ballLeft3: -335,
+        ballWidth3: 670,
         index3: 3,
+
+        ballTop1: 145,
+        ballLeft1: -320,
+        ballWidth1: 605,
+        index1: 2,
       })
     }, 500)
   },
@@ -298,9 +289,9 @@ Page({
 
     this.animation = animation;
     if (translateXX > 0) {
-      this.animation.translateY(0).rotate(20).translateX(translateXX).opacity(0).step();
+      this.animation.translateY(translateXX).rotate(20).translateX(0).opacity(0).step();
     } else {
-      this.animation.translateY(0).rotate(-20).translateX(translateXX).opacity(0).step();
+      this.animation.translateY(translateXX).rotate(-20).translateX(0).opacity(0).step();
     }
 
     this.animation.translateY(0).translateX(0).opacity(1).rotate(0).step({
@@ -313,21 +304,21 @@ Page({
 
     setTimeout(() => {
       this.setData({
-        ballTop1: 140,
+        ballTop3: 160,
+        ballLeft3: -302.5,
+        ballWidth3: 550,
+        index3: 1,
+
+        ballTop1: 130,
         ballLeft1: -335,
-        ballWidth1: 680,
+        ballWidth1: 670,
         index1: 3,
 
-        ballTop2: 130,
+        ballTop2: 145,
         ballLeft2: -320,
-        ballWidth2: 640,
+        ballWidth2: 605,
         index2: 2,
-
-        ballTop3: 120,
-        ballLeft3: -302.5,
-        ballWidth3: 605,
-        index3: 1,
       })
-    }, 500);
+    }, 500)
   },
 })
