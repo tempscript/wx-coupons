@@ -1,13 +1,57 @@
-<!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+<!--pages/index/index.wxml-->
+<view class='page-box box'>
+	<view class="nav-bar">
+		<view class="status-bar" style="height: {{statusBarHeight}}px"></view>
+		<view class="title-bar" style="height: {{titleBarHeight}}px">
+			<view class="left-icon">
+				<van-icon name="location-o" color="white" size="19" />
+				<text class="name">上海</text>
+			</view>
+      <image  bind:tap="goUser"  src="/images/icon/user.png" style="margin-right:{{menuButton.width+18}}px;width:13px;height:15px"/>
+			<!-- <van-icon name="user-o" color="white" size="19"  /> -->
+		</view>
+	</view>
+	<view class="m-box" style="top:{{statusBarHeight+titleBarHeight+12}}px">
+		<movable-area class="m-area">
+			<movable-view class='m-item' wx:for="{{list}}" wx:key="item" wx:index="index" x="{{item.x}}" y="{{item.y}}" damping="52" direction="vertical" bindchange="onChange" data-index="{{index}}" catchtouchend="touchEnd" catchtouchstart="touchStart" catchtouchmove="touchMove" out-of-bounds="true" data-index="{{index}}">
+				<!-- 根据自己的需求替换此区域 start -->
+				<view class='m-item-box item{{(index == 0 || index == list.length -1) ? 0 : 1}} '>
+					<image src="/images/b.jpeg" class="image"></image>
+					<view class="card-content">
+						<view class="card-top">
+							<view class="bar"></view>
+							<view class="title">爱情海购物公园停车券</view>
+						</view>
+						<view class="coupons-title">
+							<view class="red">5</view>
+							<view class="desc">元优惠券</view>
+						</view>
+						<view class="card-bottom">
+							<view class="list">
+								<view class="row">
+									<image src="/images/icon/2.png" style="width:15px;height:11px;margin-right:6px" /> 5元立减券
+								</view>
+								<view class="row">
+									<image src="/images/icon/3.png" style="width:11px;height:11px;margin-right:6px" />周券</view>
+								<view class="row">
+									<image src="/images/icon/1.png" style="width:15px;height:11px;margin-right:6px" />
+									可领一次
+								</view>
+								<view class="row">
+									<image src="/images/icon/4.png" style="width:10px;height:12px;margin-right:6px" />
+									全上海商场通用
+								</view>
+							</view>
+						</view>
+					</view>
+					<view class="button-wrap">
+						<button class="button submit-button">立即领取</button>
+						<button class="button share-button">邀请好友</button>
+					</view>
+				</view>
+				<!-- 根据自己的需求替换此区域 end -->
+			</movable-view>
+		</movable-area>
+	</view>
+
 </view>

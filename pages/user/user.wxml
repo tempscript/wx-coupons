@@ -1,0 +1,13 @@
+<!-- pages/user/user.wxml -->
+<view class="user-container">
+    <view class="nav-bar" style="height:{{statusBarHeight+titleBarHeight+190}}px">
+        <view class="status-bar" style="height: {{statusBarHeight}}px"></view>
+        <view class="nav" style="height: {{titleBarHeight}}px">
+            <van-icon name="arrow-left" color="#fff" size="24" custom-style="position:absolute;left:18px" />
+            <view class="title">个人中心</view>
+        </view>
+    </view>
+    <view class='m-item-box' style="top:{{statusBarHeight+titleBarHeight+12}}px">
+        
+    </view>
+</view>

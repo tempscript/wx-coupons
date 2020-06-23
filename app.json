@@ -1,7 +1,8 @@
 {
   "pages": [
-    "pages/coupons/coupons",
+    "pages/user/user",
     "pages/index/index",
+    "pages/coupons/coupons",
     "pages/logs/logs"
   ],
   "window": {
@@ -9,10 +10,11 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "white",
-    "navigationStyle":"custom"
+    "navigationStyle": "custom"
   },
   "usingComponents": {
-    "van-icon": "@vant/weapp/icon"
+    "van-icon": "@vant/weapp/icon",
+    "van-nav-bar": "@vant/weapp/nav-bar"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
