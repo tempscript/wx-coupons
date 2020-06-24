@@ -96,23 +96,6 @@
           flex: 0 0 50%;
           color: #666;
           font-size: 12px; }
-      .body-main-box .body-container .card .button-wrap {
-        margin-top: 72rpx;
-        display: flex;
-        justify-content: space-between; }
-        .body-main-box .body-container .card .button-wrap .button {
-          font-size: 20px;
-          border-radius: 6px;
-          font-weight: 300;
-          height: 45px;
-          line-height: 45px;
-          padding: 0;
-          width: 304rpx; }
-        .body-main-box .body-container .card .button-wrap .submit-button {
-          background-image: linear-gradient(#D20028, #A60012);
-          color: #fff; }
-        .body-main-box .body-container .card .button-wrap .share-button {
-          border: 1px solid #979797; }
   .body-main-box .avatar2 {
     width: 100%;
     height: 820rpx; }

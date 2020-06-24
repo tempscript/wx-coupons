@@ -11,7 +11,7 @@
 			<!-- <van-icon name="user-o" color="white" size="19"  /> -->
 		</view>
 	</view>
-	<view class="m-box" style="top:{{statusBarHeight+titleBarHeight+12}}px">
+	<view class="m-box" style="top:{{statusBarHeight+titleBarHeight+12}}px"> 
 		<movable-area class="m-area">
 			<movable-view class='m-item' wx:for="{{list}}" wx:key="item" wx:index="index" x="{{item.x}}" y="{{item.y}}" damping="52" direction="vertical" bindchange="onChange" data-index="{{index}}" catchtouchend="touchEnd" catchtouchstart="touchStart" catchtouchmove="touchMove" out-of-bounds="true" data-index="{{index}}">
 				<!-- 根据自己的需求替换此区域 start -->

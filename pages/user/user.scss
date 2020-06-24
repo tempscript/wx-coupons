@@ -1,21 +1,24 @@
 /* pages/user/user.wxss */
-.user-container{
-    .nav-bar{
+.user-container {
+    .nav-bar {
         background-color: #AC0014;
-       .nav{
-           display: flex;
-           align-items: center;
-           justify-content: center;
-           .title{
-               font-size: 20px;
-               color: #fff;
-               font-weight: 300;
-           }
-          
-       }
-       
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .title {
+                font-size: 20px;
+                color: #fff;
+                font-weight: 300;
+            }
+
+        }
+
     }
-    .m-item-box{
+
+    .m-item-box {
         margin-left: 42rpx;
         width: 670rpx;
         height: 1110rpx;
@@ -24,8 +27,202 @@
         z-index: 9;
         background: #fff;
         box-sizing: border-box;
-        padding: 8px 9px 0 9px;
         box-shadow: 0px 9px 10px 0px rgba(0, 0, 0, 0.1);
+
+        .content-top {
+            height: 229rpx;
+            box-sizing: border-box;
+            margin: 24px 16px 16px 16px;
+            display: flex;
+            align-items: center;
+
+            .avatar {
+                overflow: hidden;
+                display: block;
+                border-radius: 50%;
+                height: 75px;
+                width: 75px;
+                border-radius: 50%;
+                border: 2px solid #fff;
+                box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .nickname {
+                font-size: 20px;
+                margin-left: 12px;
+            }
+
+        }
+
+        .content-tab {
+            height: 149rpx;
+            box-sizing: border-box;
+            display: flex;
+            align-items: flex-end;
+
+            .tab-warp {
+                width: 64px;
+                height: 63px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 16px;
+            }
+            .select-tab{
+                background-image: linear-gradient(#FFBBC7, #A70012);
+                border-radius: 100px 100px 0px 0px;
+            }
+
+           
+        }
+        .title-wrap {
+            display: flex;
+            margin-top: 6px;
+            .title {
+                font-size: 11px;
+                color: #999;
+                margin: 0 16px;
+                width: 64px;
+                text-align: center;
+            }
+
+        }
+        .list{
+            height: 134px;
+            margin: 21px 12px 16px 12px;
+            .card-top{
+                height: 85px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom: 1px dashed transparent;
+                background: linear-gradient(white, white) padding-box,
+                    repeating-linear-gradient(-45deg, #D8D8D8 0, #f4f4f4 0.35em, white 0, white 0.45em);
+                .left{
+                    display: flex;
+                    .image-wrap{
+                        image{
+                            height: 48px;
+                            width: 48px;
+                            border-radius: 6px;
+                        }
+                        
+                    }
+                    .desc-wrap{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        margin-left: 12px;
+                        .title{
+                            font-size: 16px;
+                        }
+                        .date{
+                            margin-top: 12px;
+                            color: #999;
+                            font-size:12px;
+                        }
+                    }
+                }
+                .right{
+                    .money{
+                        text-align: right;
+                        font-size:28px;
+                        color:#D10027;
+                        font-weight: 500;
+                    }
+                    .usable{
+                        font-size:12px;
+                        color: #999;
+                    }
+                }
+            }
+            .card-bottom{
+                height: 49px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .left{
+                    display: flex;
+                    align-items: center;
+                    .desc{
+                        font-size:12px;
+                         color:#666;
+                    }
+                }
+                .right{
+                    .button{
+                        height: 24px;
+                        line-height: 24px;
+                        color:#fff;
+                        width: 60px;
+                        font-size: 10px;
+                        padding: 0;
+                        margin: 0;
+                        background-image: linear-gradient(#DA294B,#A80012);
+                        border-radius: 12px;
+                    }
+                }
+            }
+        }
+        .attention-wrap{
+            height: 87px;
+            background: linear-gradient(white, white) padding-box,
+            repeating-linear-gradient(-45deg, #D8D8D8 0, #f4f4f4 0.35em, white 0, white 0.45em);
+            border-bottom: 1px dashed transparent;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 16px ;
+            .left{
+                display: flex;
+                .image-wrap{
+                    image{
+                        height: 48px;
+                        width: 48px;
+                        border-radius: 6px;
+                    }
+                    
+                }
+                .desc-wrap{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    margin-left: 12px;
+                    .title{
+                        font-size: 16px;
+                    }
+                    .date{
+                        margin-top: 12px;
+                        color: #999;
+                        font-size:12px;
+                    }
+                }
+            }
+            .right{
+                .button{
+                    height:24px;
+                    line-height: 24px;
+                    padding: 0;
+                    width: 56px;
+                    border-radius: 12px;
+                    color:#fff;
+                    font-size: 10px;
+                    background-color: #D4D4D4;
+                }
+            }
+        }
+        .user-wrap{
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin:12px ;
+            .left{
+                font-size: 16px;
+                display: flex;
+                align-items: center;
+            }
+        }
     }
-    
+
 }

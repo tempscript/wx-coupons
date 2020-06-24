@@ -1,0 +1,38 @@
+<!--pages/my_ plate_number/my_ plate_number.wxml-->
+<view class="my-plate-number">
+	<view class="nav-bar">
+		<view class="status-bar" style="height: {{statusBarHeight}}px"></view>
+		<view class="nav" style="height: {{titleBarHeight}}px">
+			<van-icon  bind:tap="backTo"  name="arrow-left" color="#333" size="24" custom-style="position:absolute;left:18px" />
+			<view class="title">我的车牌</view>
+		</view>
+	</view>
+	<view class='m-item-box' style="top:{{statusBarHeight+titleBarHeight+12}}px">
+			<view class="list-wrap">
+					<view class="list van-hairline--bottom">
+									<view class="left">
+											<view class="user">
+													<view class="name">
+															张三
+													</view>
+													<view>
+															1234567890
+													</view>
+											</view>
+											<view class="address">
+													上海市 静安区 富民路89号
+											</view>
+									</view>
+									<view class="right">
+												编辑
+									</view>
+					</view>
+			</view>
+
+			<view class="button-wrap">
+				<button class="button">
+					添加地址
+				</button>
+			</view>
+	</view>
+</view>

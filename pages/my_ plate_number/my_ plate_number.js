@@ -1,4 +1,4 @@
-// pages/user/user.js
+// pages/my_ plate_number/my_ plate_number.js
 const app = getApp()
 Page({
 
@@ -9,14 +9,20 @@ Page({
     titleBarHeight: app.globalData.titleBarHeight,
     statusBarHeight: app.globalData.statusBarHeight,
     menuButton:app.globalData.menuButton,
-    tabIndex: 0
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    wx.setNavigationBarColor({
+      frontColor: '#000000',
+      backgroundColor: '#ff0000',
+      animation: {
+        duration: 400,
+        timingFunc: 'easeIn'
+      }
+    })
   },
 
   /**
@@ -67,17 +73,7 @@ Page({
   onShareAppMessage: function () {
 
   },
-  clickTab(e){
-      this.setData({
-        tabIndex:  Number(e.currentTarget.dataset.index)
-      })
-  },
   backTo(){
-    wx.navigateBack()
-  },
-  clickTo(){
-    wx.navigateTo({
-      url: '../my_ plate_number/my_ plate_number',
-    })
+     wx.navigateBack()
   }
 })

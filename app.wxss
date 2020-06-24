@@ -41,7 +41,7 @@ page{
 	right: -50%;
 	bottom: -50%;
 	left: -50%;
-	border: 0 solid #eee;
+	border: 0 solid #e9e9e9;
 	-webkit-transform: scale(0.5);
 	transform: scale(0.5); }
   

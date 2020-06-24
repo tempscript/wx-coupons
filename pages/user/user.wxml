@@ -1,13 +1,120 @@
 <!-- pages/user/user.wxml -->
 <view class="user-container">
-    <view class="nav-bar" style="height:{{statusBarHeight+titleBarHeight+190}}px">
-        <view class="status-bar" style="height: {{statusBarHeight}}px"></view>
-        <view class="nav" style="height: {{titleBarHeight}}px">
-            <van-icon name="arrow-left" color="#fff" size="24" custom-style="position:absolute;left:18px" />
-            <view class="title">个人中心</view>
-        </view>
-    </view>
-    <view class='m-item-box' style="top:{{statusBarHeight+titleBarHeight+12}}px">
+	<view class="nav-bar" style="height:{{statusBarHeight+titleBarHeight+190}}px">
+		<view class="status-bar" style="height: {{statusBarHeight}}px"></view>
+		<view class="nav" style="height: {{titleBarHeight}}px">
+			<van-icon bind:tap="backTo"  name="arrow-left" color="#fff" size="24" custom-style="position:absolute;left:18px" />
+			<view class="title">个人中心</view>
+		</view>
+	</view>
+	<view class='m-item-box' style="top:{{statusBarHeight+titleBarHeight+12}}px">
+		<view class="content-top van-hairline--bottom">
+			<view class="avatar">
+				<open-data type="userAvatarUrl"></open-data>
+			</view>
+			<open-data type="userNickName" class="nickname"></open-data>
+		</view>
+		<view class="content-tab van-hairline--bottom">
+			<view class="tab-warp {{ tabIndex === 0 ? 'select-tab':''}}" bind:tap="clickTab" data-index="0">
+				<image src="/images/icon/select-wallet.png" alt="" style="width:30px;height:29px" wx:if="{{tabIndex === 0}}" />
+				<image src="/images/icon/wallet.png" alt="" style="width:30px;height:29px" wx:else />
+			</view>
+			<view class="tab-warp {{ tabIndex === 1 ? 'select-tab':''}}" bind:tap="clickTab" data-index="1">
+				<image src="/images/icon/select-attention.png" alt="" style="width:30px;height:29px" wx:if="{{tabIndex === 1}}" />
+				<image src="/images/icon/attention.png" alt="" style="width:30px;height:29px" wx:else />
+			</view>
+			<view class="tab-warp {{ tabIndex === 2 ? 'select-tab':''}}" bind:tap="clickTab" data-index="2">
+				<image src="/images/icon/select-gerenxinxi.png" alt="" style="width:30px;height:29px" wx:if="{{tabIndex === 2}}" />
+				<image src="/images/icon/gerenxinxi.png" alt="" style="width:30px;height:29px" wx:else />
+			</view>
+		</view>
+		<view class="title-wrap">
+			<view class="title">我的券包</view>
+			<view class="title">我的关注</view>
+			<view class="title">个人信息</view>
+		</view>
+		<view class="list van-hairline--bottom" wx:if="{{tabIndex === 0}}">
+			<view class="card-top">
+				<view class="left">
+					<view class="image-wrap">
+						<image src="/images/a.png" />
+					</view>
+					<view class="desc-wrap">
+						<view class="title">代客泊车</view>
+						<view class="date">2020-06-24</view>
+					</view>
+				</view>
+				<view class="right">
+					<view class="money">¥3</view>
+					<view class="usable"> 满49可用</view>
+				</view>
+			</view>
+			<view class="card-bottom">
+				<view class="left">
+					<view class="desc">仅用于指定商家</view>
+					<van-icon name="arrow-down" color="#666" style="margin-left:17px" />
+				</view>
+				<view class="right">
+					<button class="button">去使用</button>
+				</view>
+			</view>
+		</view>
+		<view wx:elif="{{tabIndex === 1}}">
+			<view class="attention-wrap">
+				<view class="left">
+					<view class="image-wrap">
+						<image src="/images/a.png" />
+					</view>
+					<view class="desc-wrap">
+						<view class="title">代客泊车</view>
+						<view class="date">2020-06-24</view>
+					</view>
+				</view>
+				<view class="right">
+					<button class="button">
+                        取消关注
+                    </button>
+					
+				</view>
+			</view>
+            <view class="attention-wrap">
+				<view class="left">
+					<view class="image-wrap">
+						<image src="/images/a.png" />
+					</view>
+					<view class="desc-wrap">
+						<view class="title">代客泊车</view>
+						<view class="date">2020-06-24</view>
+					</view>
+				</view>
+				<view class="right">
+					<button class="button">
+                        取消关注
+                    </button>
+					
+				</view>
+			</view>
+		</view>
+		<view wx:else>
+            <view class="user-wrap van-hairline--bottom" bind:tap="clickTo">
+                <view class="left">
+                    <image  src="/images/icon/plate.png" style="width:17px;height:14px;margin-right:6px"/>
+                     我的车牌
+                </view>
+                <view class="right">
+                    <van-icon name="arrow" size="16" color="#999" />
+                </view>
+            </view>
+            <view class="user-wrap van-hairline--bottom">
+                <view class="left">
+                    <image  src="/images/icon/my-address.png" style="width:13px;height:17px;margin-right:8px"/>
+                     我的地址
+                </view>
+                <view class="right">
+                    <van-icon name="arrow" size="16" color="#999" />
+                </view>
+            </view>
         
-    </view>
+        </view>
+	</view>
 </view>
